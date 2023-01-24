@@ -1,0 +1,14 @@
+writeRecord: a private helper method
+input parameter(s): name, rank, city, state, zip, employees
+returns: Boolean (true if file is open, false otherwise)
+purpose: Using formatted writes, writes a fixed length record at the current location of the dbFileptr.
+
+create database: creates two files filename.config, filename.data
+
+Fortune500.config: contains the number of records in the sorted data file. This will be the number of records in the input 
+data, e.g., 500 It may also contain any other information you find helpful. You may hardcode the names and sizes of the fields 
+in your program, but you could use the config file to describe the names, sizes of the fields in order, anything else you want.
+
+filename.data:contains the data records, one per line, with fixed size fields. The first field is the key for each record and 
+the records are assumed to be in sorted order by the key. You may use any separator you want (or no separator). To allow for 
+adding additional records, you should write 2 blank fixed length records after each real record read from the input data file
